@@ -1,0 +1,39 @@
+{
+    "name": "kawayanmedia/pds",
+    "description": "Framework-agnostic Personal Data Sheet (PDS / CS Form 212) PDF generator",
+    "version": "0.1.0",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "pds",
+        "cs-form-212",
+        "personal-data-sheet",
+        "pdf",
+        "hr"
+    ],
+    "require": {
+        "kawayanmedia/persistence": "^0.1",
+        "php": "^8.2",
+        "setasign/fpdf": "^1.9",
+        "setasign/fpdi": "^2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "KawayanMedia\\Pds\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KawayanMedia\\Pds\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
