@@ -89,7 +89,12 @@ $store = new PdoPdsStore($database, $tables);
 
 Columns written per section are listed in `Service\PdsEditor::COLUMNS`, and
 `Model\PdsProfile::COLUMNS` / `Model\ServiceRecordEntry::COLUMNS` cover the two
-sections that also have typed models. The package never creates tables.
+sections that also have typed models.
+
+The package ships its migrations in `database/migrations`; Laravel runs them
+through the registered service provider. Run `php artisan migrate` after
+installing. Hosts that already own these tables can disable the package
+migrations and point `PdsTables` at their own names instead.
 
 ## Custom persistence
 
